@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package protobuf;
+
+option go_package = "transport";
+
+message Request {
+    // Unique message Id
+    uint64 msgId = 1;
+
+    // Object to call a method on
+    string objectPath = 2;
+
+    // Remote method to call
+    string method = 3;
+
+    // Arguments are encoded into a CBOR list
+    bytes arguments = 4;
+}
+
+message Response {
+    // Unique message Id
+    uint64 msgId = 1;
+
+    // Response information encoded into a CBOR list
+    bytes response = 2;
+}
+
+service KernelSyscall {
+    rpc call(Request) returns (Response) {}
+
+    rpc serverStream(Request) returns (stream Response) {}
+
+    rpc clientStream(stream Request) returns (Response) {}
+
+    rpc stream(stream Request) returns (stream Response) {}
+}

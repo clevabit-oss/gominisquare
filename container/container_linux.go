@@ -1,7 +1,7 @@
 package container
 
 import (
-	"gominisquare/uuid"
+	"github.com/satori/uuid"
 	"os"
 	"time"
 )
@@ -23,11 +23,7 @@ type linuxContainer struct {
 }
 
 func NewLinuxContainer(config Config) (Container, error) {
-	id, err := uuid.NewV4()
-	if err != nil {
-		return nil, err
-	}
-
+	id := uuid.NewV4()
 	container := &linuxContainer{
 		id:     id.String(),
 		config: config,

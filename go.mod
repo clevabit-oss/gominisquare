@@ -2,10 +2,8 @@ module gominisquare
 
 require (
 	github.com/golang/protobuf v1.2.0
-	github.com/juju/loggo v0.0.0-20180524022052-584905176618 // indirect
 	github.com/kr/pretty v0.1.0 // indirect
-	github.com/vishvananda/netlink v1.0.0 // indirect
-	github.com/vishvananda/netns v0.0.0-20180720170159-13995c7128cc // indirect
+	github.com/satori/uuid v1.2.0
 	golang.org/x/net v0.0.0-20180826012351-8a410e7b638d
 	google.golang.org/grpc v1.16.0
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127

@@ -1,5 +1,5 @@
 package sandbox
 
-import "gominisquare/duktape"
+import "gopkg.in/olebedev/go-duktape.v3"
 
 type EventLoopTask = func(ctx *duktape.Context)

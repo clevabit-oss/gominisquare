@@ -2,7 +2,7 @@ package debugger
 
 import (
 	"fmt"
-	"gominisquare/duktape"
+	"gopkg.in/olebedev/go-duktape.v3"
 	"log"
 	"unsafe"
 )

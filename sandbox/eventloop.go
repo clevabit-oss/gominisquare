@@ -1,7 +1,7 @@
 package sandbox
 
 import (
-	"gominisquare/duktape"
+	"gopkg.in/olebedev/go-duktape.v3"
 	"runtime"
 	"sync"
 	"time"
